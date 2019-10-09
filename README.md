@@ -22,6 +22,12 @@ in numpy array format, like face_recognition, Keras, etc.
 You can install from [PyPI](https://pypi.org/project/image_to_numpy/):
 
     pip install image_to_numpy
+    
+## What is Exif Orientation data?
+
+Most images captured by cell phones and consumer cameras aren't stored on disk in the same orientation they appear on screen. Exif Orientation data tells the program which way the image needs to be rotated to display correctly. Not handling Exif Orientation is a common source of bugs in Computer Vision and Machine Learning applications.
+
+[You can learn more about images and Exif Orientation data in my article here](https://medium.com/@ageitgey/the-dumb-reason-your-fancy-computer-vision-app-isnt-working-exif-orientation-73166c7d39da).
 
 ## Usage
 
