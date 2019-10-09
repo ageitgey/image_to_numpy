@@ -3,6 +3,8 @@
 Load an image file into a numpy array - while automatically rotating the image based on 
 Exif orientation. Prevents upside-down and sideways images! 
 
+![](https://user-images.githubusercontent.com/896692/66508512-329d3380-eac9-11e9-8b48-74920d7f4d50.png)
+
 ```
 import image_to_numpy
 
