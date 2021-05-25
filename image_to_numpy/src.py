@@ -81,7 +81,18 @@ def load_image_file(file, mode='RGB'):
 
     if hasattr(PIL.ImageOps, 'exif_transpose'):
         # Very recent versions of PIL can do exit transpose internally
-        img = PIL.ImageOps.exif_transpose(img)
+        
+        # PIL.ImageOps.exif_transpose() is raising an exception.
+        # perform exif_transpose() manually until it gets fixed.
+        try:
+
+            img = PIL.ImageOps.exif_transpose(img)
+
+        except:
+            
+            img = PIL.Image.open(file)
+            img = exif_transpose(img)
+
     else:
         # Otherwise, do the exif transpose ourselves
         img = exif_transpose(img)
